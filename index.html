@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Liderança</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="number"] {
+            width: 50%;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Liderança</h2>
+        <form id="leadershipForm" action="#" method="post">
+            <div class="form-group">
+                <label for="timestamp">Carimbo de data/hora</label>
+                <input type="text" id="timestamp" name="timestamp" readonly value="">
+            </div>
+            <div class="form-group">
+                <label for="email">Endereço de e-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">TELEFONE DA LIDERANÇA:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="coordenador">COORDENADOR:</label>
+                <input type="text" id="coordenador" name="coordenador" required>
+            </div>
+            <div class="form-group">
+                <label for="lideranca">LIDERANÇA:</label>
+                <input type="text" id="lideranca" name="lideranca" required>
+            </div>
+            <div class="form-group">
+                <label for="regional">REGIONAL:</label>
+                <input type="text" id="regional" name="regional" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">ENDEREÇO:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="bairro">BAIRRO:</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+            <div class="form-group">
+                <label for="panfletos">PANFLETOS:</label>
+                <input type="number" id="panfletos" name="panfletos">
+            </div>
+            <div class="form-group">
+                <label for="santinhos">SANTINHOS:</label>
+                <input type="number" id="santinhos" name="santinhos">
+            </div>
+            <div class="form-group">
+                <label for="botons">BOTONS:</label>
+                <input type="number" id="botons" name="botons">
+            </div>
+            <div class="form-group">
+                <label for="adesivo_redondo">ADESIVO REDONDO:</label>
+                <input type="number" id="adesivo_redondo" name="adesivo_redondo">
+            </div>
+            <div class="form-group">
+                <label for="adesivo_retangular">ADESIVO RETANGULAR:</label>
+                <input type="number" id="adesivo_retangular" name="adesivo_retangular">
+            </div>
+            <div class="form-group">
+                <label for="adesivo_carro">ADESIVO CARRO:</label>
+                <input type="number" id="adesivo_carro" name="adesivo_carro">
+            </div>
+            <div class="form-group">
+                <label for="bandeiras_p">BANDEIRAS P:</label>
+                <input type="number" id="bandeiras_p" name="bandeiras_p">
+            </div>
+            <div class="form-group">
+                <label for="bandeiras_m">BANDEIRAS M:</label>
+                <input type="number" id="bandeiras_m" name="bandeiras_m">
+            </div>
+            <div class="form-group">
+                <label for="bandeiras_g">BANDEIRAS G:</label>
+                <input type="number" id="bandeiras_g" name="bandeiras_g">
+            </div>
+            <div class="form-group">
+                <label for="banner">BANNER:</label>
+                <input type="number" id="banner" name="banner">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Script para adicionar o carimbo de data/hora automaticamente
+        document.getElementById('timestamp').value = new Date().toLocaleString();
+
+        // Script para lidar com o envio do formulário (você pode conectá-lo a Google Apps Script)
+        document.getElementById('leadershipForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Formulário enviado com sucesso!');
+            // Aqui você pode adicionar o código para enviar os dados para um servidor ou Google Sheets
+        });
+    </script>
+</body>
+</html>
